@@ -31,6 +31,11 @@ for (row in 1:nrow(log)) {
 }
 rm(row)
 
+#cast numeric rows to numeric for reals
+log$files_changed <- as.numeric(log$files_changed)
+log$insertions <- as.numeric(log$insertions)
+log$deletions <- as.numeric(log$deletions)
+
 #only keep the columns we need
 log <- log[, c(
     'commit',
