@@ -1,3 +1,7 @@
+#loads up a bunch of git log data into R and tidies things up
+#assumes that a file 'git.log' exists that has been setup from a bash script
+#see more information in README.md
+
 #load tab-delimited data into R
 log <- read.delim(
     file = 'git.log',
